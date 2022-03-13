@@ -11,9 +11,27 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column (unique = true)
+    @Column (unique = true, length = 100)
     private String username;
 
+    @Column(length = 50)
+    private String firstName;
+
+    @Column(length = 50)
+    private String lastName;
+
+    @Column(length = 100)
+    private String streetAddress;
+
+    @Column(length = 15)
+    private String state;
+
+    @Column(length = 9)
+    private String postalCode;
+
+    @Column(length = 254)
+    private String email;
+    
     @Column
     @JsonIgnore
     private String password;
